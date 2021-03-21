@@ -1,0 +1,74 @@
+/**
+    Title: site.css
+    Author: Angela Martin
+    Date: 03/21/2021
+    Description: Styling for WEB 330 html files.
+ */
+
+ /** Styling for the app-header class.*/
+ .app-header {
+    text-align: center;
+    font-weight: 400;
+}
+
+.assign-container {
+    padding: 10px;
+}
+
+.assign-content {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+.assign-results-text {
+    text-align: center;
+    font-size: 28px;
+}
+
+/** Styling for the form class. */
+.form {
+    display: inline-grid;
+    grid-template-columns: auto;
+}
+
+/** Styling for the form field. */
+.form-field {
+    padding: 20px;
+}
+
+/** Setting the width for the full-width class. */
+.full-width {
+    width: 100%;
+}
+
+/** Styling for the return-home class. */
+.return-home {
+    color: #4F3674;
+    text-decoration: none;
+}
+
+/** Styling for when hovering over the return-home link. */
+.return-home:hover {
+    background-color: #D6A800;
+}
+
+/** Styling for when after the return-home link has been visited. */
+.return-home:visited {
+    color: #3C275A;
+}
+
+#container {
+    margin: 50 100 auto 100;
+}
+
+#icon-mode:hover {
+    cursor: pointer;
+}
+
+#icon-text {
+    padding-left: 10px;
+}
+
+.pull-right {
+    float: right;
+}

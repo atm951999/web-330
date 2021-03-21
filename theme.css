@@ -1,0 +1,164 @@
+/**
+    Title: theme.css
+    Author: Angela Martin
+    Date: 03/20/2021
+    Description: Styling for WEB 330 html files.
+ */
+
+  /** Adds box-shadow styling to the card class. */
+body.light-theme {
+    --text-color: #000;
+    --background-color: #fff;
+    --anchor-color: #4F3674;
+    --h1-background-color: #3c275a;
+    --h1-border-color: #D6A800;
+    --heading-background-color: #3c275a;
+    --heading-color: #fff;
+    --heading-border-color: #D6A800;
+    --anchor-hover-color: #4F3674;
+    --anchor-hover-background-color: #D6a800;
+    --card-background-color: #fff;
+    --card-title-color: #4F3674;
+    --btn-background-color: #4F3674;
+    --btn-color: #fff;
+    --btn-hover-background-color: #D6A800;
+    --btn-hover-color: #4F3674;
+    --input-border-color: #ccc;
+}
+
+body.dark-theme{
+    --text-color: #fafafa;
+    --background-color: #303030;
+    --anchor-color: #fff;
+    --h1-background-color: #9c27b0;
+    --h1-border-color: #9c27b0;
+    --heading-background-color: #424242;
+    --heading-color: #fff;
+    --heading-border-color: #424242;
+    --anchor-hover-color: #D176e1;
+    --anchor-hover-background-color: #303030;
+    --card-background-color: #424242;
+    --card-title-color: #D176e1;
+    --btn-background-color: #D176e1;
+    --btn-color: #fff;
+    --btn-hover-background-color: #7d4787;
+    --btn-hover-color: #fff;
+    --input-border-color: #303030; 
+}
+
+body {
+    body.dark-theme{
+    --text-color: #fafafa;
+    --background-color: #303030;
+    --anchor-color: #fff;
+    --h1-background-color: #9c27b0;
+    --h1-border-color: #9c27b0;
+    --heading-background-color: #424242;
+    --heading-color: #fff;
+    --heading-border-color: #424242;
+    --anchor-hover-color: #D176e1;
+    --anchor-hover-background-color: #303030;
+    --card-background-color: #424242;
+    --card-title-color: #D176e1;
+    --btn-background-color: #D176e1;
+    --btn-color: #fff;
+    --btn-hover-background-color: #7d4787;
+    --btn-hover-color: #fff;
+    --input-border-color: #303030; 
+}
+
+/* Body styling */
+body {
+    font-family: "Oswald, Verdana, Arial, sans-serif";
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Anchor styling with variables */
+a {
+    color: var(--anchor-color);
+    text-decoration: none;
+}
+
+/* Anchor hover styling with variables */
+a.hover{
+    background-color: var(--anchor-hover-background-color);
+    color: var(--anchor-hover-color);
+}
+
+/* Heading 1 styling with variables */
+h1 {
+    color: var(--heading-color);
+    background-color: var(--h1-background-color);
+    padding: 10px;
+    border: solid 1px;
+    border-color: var(--h1-border-color);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);               
+    transition: 0.3s;
+    background-color: var(--card-background-color);
+}
+
+/** Styling for the card-title class. */
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: var(--card-title-color);
+    font-weight: 400;
+}
+
+/** Adds padding to the card-content class. */
+.card-content {
+    padding: 2px 16px;
+}
+
+/** Styles box-shadow for card class when hovered over. */
+.card:hover {
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/** Styling for the button class. */
+.btn {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 15px 32px;
+    color: black;
+}
+
+/** Styling for the btn-primary class. */
+.btn-primary {
+    background-color: #4F3674;
+    color: var(--btn-hover-color);
+}
+
+/** Styling for the .btn-primary class when hovering over it. */
+.btn-primary:hover {
+    background-color: #D6A800;
+    color: var(--btn-hover-color);
+}
+
+.drop-down-menu {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: solid 1px var(--input-border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/** Styling for the input class. */
+.input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: solid 1px var(--input-border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
