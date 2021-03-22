@@ -46,30 +46,11 @@ body.dark-theme{
     --input-border-color: #303030; 
 }
 
-body {
-    body.dark-theme{
-    --text-color: #fafafa;
-    --background-color: #303030;
-    --anchor-color: #fff;
-    --h1-background-color: #9c27b0;
-    --h1-border-color: #9c27b0;
-    --heading-background-color: #424242;
-    --heading-color: #fff;
-    --heading-border-color: #424242;
-    --anchor-hover-color: #D176e1;
-    --anchor-hover-background-color: #303030;
-    --card-background-color: #424242;
-    --card-title-color: #D176e1;
-    --btn-background-color: #D176e1;
-    --btn-color: #fff;
-    --btn-hover-background-color: #7d4787;
-    --btn-hover-color: #fff;
-    --input-border-color: #303030; 
-}
+
 
 /* Body styling */
 body {
-    font-family: "Oswald, Verdana, Arial, sans-serif";
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -88,6 +69,14 @@ a.hover{
 
 /* Heading 1 styling with variables */
 h1 {
+    color: var(--heading-color);
+    background-color: var(--h1-background-color);
+    padding: 10px;
+    border: solid 1px;
+    border-color: var(--h1-border-color);
+}
+
+h2, h3, h4 {
     color: var(--heading-color);
     background-color: var(--h1-background-color);
     padding: 10px;
@@ -134,13 +123,13 @@ h1 {
 
 /** Styling for the btn-primary class. */
 .btn-primary {
-    background-color: #4F3674;
-    color: var(--btn-hover-color);
+    background-color: var(--btn-background-color);
+    color: var(--btn-color);
 }
 
 /** Styling for the .btn-primary class when hovering over it. */
 .btn-primary:hover {
-    background-color: #D6A800;
+    background-color: var(--btn-hover-background-color);
     color: var(--btn-hover-color);
 }
 

@@ -7,17 +7,22 @@
 
 <!DOCTYPE html>
 <html lang="en">
+    <!-- Document header-->
     <head>
         <title>WEB 330 – Enterprise JavaScript II</title>
-        <link href="/theme.css" rel="stylesheet">
-        <link href="/site.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="site.css"> 
+        <link rel="stylesheet" type="text/css" href="theme.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
     </head>
     <body class="light-theme">
-        <div id="container">
-            <i onclick="toggleMode()" id="icon-mode" class="fa fa-toggle-off pull-right" style="font-size: 28px;"><span id="icon-text"></span></i>
+        <!-- Create toggle switch-->
+        <i onclick="toggleMode()" id="icon-mode" class="fa fa-toggle-off pull-right" style="font-size: 28px;"><span id="icon-text"></span></i>
 
+        <div id="container">
+            
+            
             <h1> Angela Martin's Landing Page</h1>
             <h2>Web 330 Enterprise JavaScript II</h2>
 
@@ -38,7 +43,7 @@
 
             <ul>
                 <li>Personal Portfolio</li>
-                <li>Web 230's Landing Page</li>
+                <li>Web 231's Landing Page</li>
             </ul>
 
             <h4>Important Links</h4>
@@ -53,5 +58,30 @@
             </ul>
 
         </div>
+        <script>
+            function setDefaultTheme()
+        {
+            const theme = localStorage.getItem(key,"mode") || "light-theme";
+            const iconMode = localStorage.getItem(key,"iconMode") || "fa-toggle-off";
+            const iconText = localStorage.getItem(key,"iconText") || "Light Mode";
+
+            document.body.classList.value = theme;
+            document.getElementById(elementId, "icon-mode").classList.add(iconMode);
+            document.getElementById(elementId, "icon-text").innerHTML = iconText;
+        }
+
+        function setSelectedTheme()
+        {
+            document.body.classList.value = localStorage.getItem(key, "mode") || "light-theme";
+        }
+
+        setDefaultTheme();
+
+        function toggleMode(X)
+        {
+            let colorTheme = document.body.classList; //get the body's CSS class
+            let iconMode = X.classList;
+        }
+        </script>
     </body>
 </html>
