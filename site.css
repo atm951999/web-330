@@ -10,16 +10,16 @@
     text-align: center;
     font-weight: 400;
 }
-
+/** Styling to set assignment container padding. */
 .assign-container {
     padding: 10px;
 }
-
+/** Styling for the width of the assignment container. */
 .assign-content {
     width: 600px;
     margin: 3% auto 0;
 }
-
+/** Styling for the results text. */
 .assign-results-text {
     text-align: center;
     font-size: 28px;
@@ -56,19 +56,22 @@
 .return-home:visited {
     color: #3C275A;
 }
-
+/** Styling to set the container margins. */
 #container {
     margin: 50px 100px auto 100px;
 }
 
+/** Styling to change cursor to pointer when hovering over. */
 #icon-mode:hover {
     cursor: pointer;
 }
 
+/** Styling to keep the padding on the icon text's left side. */
 #icon-text {
     padding-left: 10px;
 }
 
+/** Styling to make the icon pull right. */
 .pull-right {
     float: right;
 }

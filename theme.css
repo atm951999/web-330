@@ -5,7 +5,7 @@
     Description: Styling for WEB 330 html files.
  */
 
-  /** Adds box-shadow styling to the card class. */
+  /** The styling variants for the light mode. */
 body.light-theme {
     --text-color: #000;
     --background-color: #fff;
@@ -26,6 +26,7 @@ body.light-theme {
     --input-border-color: #ccc;
 }
 
+/** The styling variants for the dark mode. */
 body.dark-theme {
     --text-color: #fafafa;
     --background-color: #303030;
@@ -45,8 +46,6 @@ body.dark-theme {
     --btn-hover-color: #fff;
     --input-border-color: #303030; 
 }
-
-
 
 /* Body styling */
 body {
@@ -76,6 +75,7 @@ h1 {
     border-color: var(--h1-border-color);
 }
 
+/** The styling for heading 1, heading 2 and heading 3. */
 h2, h3, h4 {
     color: var(--heading-color);
     background-color: var(--h1-background-color);
@@ -84,6 +84,7 @@ h2, h3, h4 {
     border-color: var(--h1-border-color);
 }
 
+/** The box-shadow styling for the card. */
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);               
     transition: 0.3s;
@@ -133,6 +134,7 @@ h2, h3, h4 {
     color: var(--btn-hover-color);
 }
 
+/** The styling for the drop down menu. */
 .drop-down-menu {
     padding: 12px 20px;
     margin: 8px 0;
