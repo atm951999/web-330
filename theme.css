@@ -26,7 +26,7 @@ body.light-theme {
     --input-border-color: #ccc;
 }
 
-body.dark-theme{
+body.dark-theme {
     --text-color: #fafafa;
     --background-color: #303030;
     --anchor-color: #fff;
@@ -62,7 +62,7 @@ a {
 }
 
 /* Anchor hover styling with variables */
-a.hover{
+a:hover{
     background-color: var(--anchor-hover-background-color);
     color: var(--anchor-hover-color);
 }
