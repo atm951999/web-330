@@ -1,0 +1,75 @@
+<!--
+    Title: martin-sequence-game.html
+    Author: Angela Martin
+    Date: 02/04/2021
+    Description: Assignment 5.2 html file.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Document Header information. -->
+    <head>
+        <title>WEB 231 – Enterprise JavaScript I</title>        
+        
+        <link href="/site.css" type="text/css" rel="stylesheet">
+        <link href="/theme.css" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="Assignment 5.2 - Sequence Game">
+        <meta name="author" content="Angela Martin">
+        <meta name="robots" content="nofollow">        
+    </head>
+
+    <body onload="pageLoad()">
+        <!-- This is the application container. -->
+        <div id="container">
+            <!-- H1 Title. -->
+            <h1 class="app-header">Welcome to the Palindrome App!</h1>
+            <!-- Form container. -->
+            <div id="form-example">
+                <!-- Create card. -->
+                <div class="card">
+                    <!-- Card title. -->
+                    <div class="card-title">Palindrome Checker</div>
+                        
+                        <div class="card-content">
+
+                            <div class="form">
+
+                                <div class="form-field"> 
+                                    <!-- Label information. -->
+                                    <label id="form-field" for="txtPhrase">Phrase value:</label>
+                                    <input class="input" type="text" id="txtPhrase" name="txtPhrase">
+                                </div>
+
+                                <div class="form-field">
+                                    <!-- Button information. -->
+                                    <button onclick="checkPhrase()" type="button" class="btn btn-primary full-width" id="btnCheckPhrase">Check Phrase</button>
+                                </div>
+                            </div>    
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- Form container. -->
+        <div id="form-results-example">
+            <!-- Create card. -->
+            <div class="card">
+                <!-- Card title. -->
+                <div class="card-title">Palindrome Results</div>
+                <!-- Where the results are displayed. -->
+                <div class="card-content" id="results"></div>
+            </div>
+                <br>
+                <!-- Link to the Landing Page. -->
+                <div>
+                    <a class="return-home" href="https://atm951999.github.io/web-231/">Return</a>
+                </div>
+        </div>
+            <!-- JavaScript for Sequence Game  -->
+            <script>                
+                
+            </script>
+    </body>
+</html>

@@ -78,10 +78,10 @@ h1 {
 /** The styling for heading 1, heading 2 and heading 3. */
 h2, h3, h4 {
     color: var(--heading-color);
-    background-color: var(--h1-background-color);
+    background-color: var(--heading-background-color);
     padding: 10px;
     border: solid 1px;
-    border-color: var(--h1-border-color);
+    border-color: var(--heading-border-color);
 }
 
 /** The box-shadow styling for the card. */
