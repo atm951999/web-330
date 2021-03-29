@@ -1,33 +1,33 @@
 <!--
-    Title: martin-sequence-game.html
+    Title: palindrome.html
     Author: Angela Martin
-    Date: 02/04/2021
-    Description: Assignment 5.2 html file.
+    Date: 03/27/2021
+    Description: Assignment 2.2 palindrome.html file.
 -->
 
 <!DOCTYPE html>
 <html lang="en">
     <!-- Document Header information. -->
     <head>
-        <title>WEB 231 – Enterprise JavaScript I</title>        
-        
-        <link href="/site.css" type="text/css" rel="stylesheet">
-        <link href="/theme.css" type="text/css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+        <title>WEB 330 – Enterprise JavaScript II</title>        
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <meta name="description" content="Assignment 5.2 - Sequence Game">
+        <meta name="description" content="Assignment 2.2 - Palindrome App">
         <meta name="author" content="Angela Martin">
-        <meta name="robots" content="nofollow">        
+        <meta name="robots" content="nofollow"> 
+        <link href="../site.css" type="text/css" rel="stylesheet">
+        <link href="../theme.css" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">       
     </head>
 
-    <body onload="pageLoad()">
+    <body class="light-theme">
+        
         <!-- This is the application container. -->
-        <div id="container">
+        <div class="assign-container">
             <!-- H1 Title. -->
-            <h1 class="app-header">Welcome to the Palindrome App!</h1>
+            <h1 class="app-header" style="background-color: white; color: black; border: none;">Welcome to the Palindrome App!</h1>
             <!-- Form container. -->
-            <div id="form-example">
+            <div class="assign-content">
                 <!-- Create card. -->
                 <div class="card">
                     <!-- Card title. -->
@@ -40,36 +40,110 @@
                                 <div class="form-field"> 
                                     <!-- Label information. -->
                                     <label id="form-field" for="txtPhrase">Phrase value:</label>
-                                    <input class="input" type="text" id="txtPhrase" name="txtPhrase">
+                                    <input class="input" type="text" id="txtPhrase" name="phrase">
                                 </div>
 
                                 <div class="form-field">
                                     <!-- Button information. -->
-                                    <button onclick="checkPhrase()" type="button" class="btn btn-primary full-width" id="btnCheckPhrase">Check Phrase</button>
+                                    <button type="button" class="btn btn-primary full-width input" id="btnCheckPhrase">Check Phrase</button>
                                 </div>
                             </div>    
-                        </div>
+                        </div>                        
                 </div>
-            </div>
-        </div>
+            <br>
+            <!-- Link to the Landing Page. -->
+            <a class="return-home" href="https://atm951999.github.io/web-330/">Return</a>
+            </div>            
+        </div>        
         <!-- Form container. -->
-        <div id="form-results-example">
-            <!-- Create card. -->
-            <div class="card">
-                <!-- Card title. -->
-                <div class="card-title">Palindrome Results</div>
-                <!-- Where the results are displayed. -->
-                <div class="card-content" id="results"></div>
-            </div>
-                <br>
-                <!-- Link to the Landing Page. -->
-                <div>
-                    <a class="return-home" href="https://atm951999.github.io/web-231/">Return</a>
+            <div class="assign-container">
+                <div class="assign-content">                       
+                    <!-- Create card. -->
+                    <div class="card">
+                        <!-- Card title. -->
+                        <div class="card-title">Palindrome Results</div>
+                        <div id="assign-results-header"></div>
+                        <!-- Where the results are displayed. -->
+                        <div class="card-content assign-results-text" id="assign-results" style="text-align: center;"></div>
+                    </div>                     
                 </div>
-        </div>
-            <!-- JavaScript for Sequence Game  -->
-            <script>                
+            </div>
+            <!-- JavaScript for Palindrome  -->
+            <script>
+                 
+                // Function to get today's date. Return's today's date.
+                function getTodaysDate(date) {
+                    let dateObject = new Date();
+                    return dateObject.toLocaleDateString(date);
+                };
                 
+                // Function to get the strings length. Returns the strings length.
+                function getLength(string) {
+                    return string.length;
+                };
+
+                // Function to reverse the string. Returns the reversed string.                
+                function reverse(string) {
+                    let array = string.split('');
+                    let reversedArray = array.reverse();
+                    let reversedString = reversedArray.join('');
+
+                    return reversedString;
+                };
+                
+                // Function isPalindrome determines if the txtPhrase is a palindrome.
+                function isPalindrome(string) {
+                    return reverse(string) == string;
+                };            
+                
+                //Register an onclick event using document.getElementById(“id”).onclick function
+                document.getElementById("btnCheckPhrase").onclick = function testClick() {
+
+                    // Capture the inputted phrase and assign it to a variable named txtPhrase 
+                    let txtPhrase = document.getElementById("txtPhrase").value;
+
+                    // Assign the “assign-results” div to a variable named assignResults
+                    let assignResults = document.getElementById("assign-results");
+
+                    // Assign the “assign-results” div to a variable named assignResultsHeader
+                    let assignResultsHeader = document.getElementById("assign-results-header");
+                    
+                    // Create a variable called today
+                    let today = getTodaysDate("en-US");
+                    
+                    // Create a variable called getLength.
+                    let len = getLength(txtPhrase);
+                    
+                    // Create a variable called reversedPhrase.
+                    let reversedPhrase = reverse(txtPhrase);
+
+                    // Create a variable called message and determine if it uses the is a palindrome or is not a palindrome message.
+                    let message;
+                    if (isPalindrome(txtPhrase) == true) {
+                        message = `${txtPhrase.toLowerCase()} <strong><u>is</u></strong> a Palindrome!`
+                    }
+                    else
+                    {
+                        message = `${txtPhrase.toLowerCase()} <strong><u>is not</u></strong> a Palindrome!`
+                    }
+                    
+                    // Header variable. This is where the string will be built.
+                    let header = `
+                    Date: ${today}<br>
+                    Original Phrase: ${txtPhrase.toLowerCase()}<br>
+                    Reversed Phrase: ${reversedPhrase.toLowerCase()}<br>
+                    Phrase Length: ${len}<br>`
+
+                    // Assign the header to the assignResultsHeader variable.
+                    assignResultsHeader.innerHTML = header;
+
+                    // Create results variable.
+                    let results = `${message}`                    
+
+                    // Assign the results to the assignResults variable.
+                    assignResults.innerHTML = results;
+                }
+                                
             </script>
     </body>
 </html>
