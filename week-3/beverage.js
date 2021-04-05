@@ -9,6 +9,8 @@
 ;===========================================
 */
 
+import { Product } from "./product.js";
+
 // Create Beverage class.
 export class Beverage extends Product
 {
