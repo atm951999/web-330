@@ -1,0 +1,37 @@
+/**
+    Title: restaurant.css
+    Author: Angela Martin
+    Date: 04/04/2021
+    Description: Styling for restaurant.html file.
+ */
+
+  /** Styling for the grid.*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0px;
+  row-gap: 15px;
+  grid-auto-rows: auto;  
+}
+
+ /** Styling for grid-items 1 - 4.*/
+.grid-item-1 {
+  grid-column: 1/2;
+  grid-row: 1;
+}
+
+.grid-item-2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.grid-item-3 {
+  grid-column: 1;
+  grid-row: 2;
+  padding-bottom: 25px;
+}
+
+.grid-item-4 {
+  grid-column: 2;
+  grid-row: 2;
+}
