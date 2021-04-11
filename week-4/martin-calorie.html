@@ -1,0 +1,154 @@
+<!--
+    Title: martin-calorie.html
+    Author: Angela Martin
+    Date: 04/09/2021
+    Description: Assignment 4.2 martin-calorie.html file.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Document Header information. -->
+    <head>
+        <title>WEB 330 – Enterprise JavaScript II</title>        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="Assignment 4.2 - Calorie App">
+        <meta name="author" content="Angela Martin">
+        
+        <link href="martin-calorie.css" type="text/css" rel="stylesheet">
+        <link href="../site.css" type="text/css" rel="stylesheet">
+        <link href="../theme.css" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+        
+        <script src="../theme.js"></script>
+    </head>
+
+    <body class="light-theme">
+        
+        <!-- This is the application container. -->
+        <div class="assign-container">
+            <!-- H1 Title. -->
+            <h1 class="app-header" style="background-color: white; color: black; border: none;">Welcome to the Calorie App!</h1>
+            <!-- Form container. -->
+            <div class="assign-content">
+                <!-- Create card. -->
+                <div class="card">
+                    <!-- Card title. -->
+                    <div class="card-title">Calorie Search Form</div>
+                        
+                        <div class="card-content">
+
+                            <div class="form">
+
+                                <div class="form-field"> 
+                                    <!-- Label information. -->
+                                    <label id="form-field" for="txtPhrase">Enter a food item:</label>
+                                    <input class="input" type="text" id="txtFoodItem" name="phrase"><br>
+                                    <span id="foodList"></span>
+                                </div>
+
+                                <div class="form-field">
+                                    <!-- Button information. -->
+                                    <button type="button" class="btn btn-primary full-width input" id="btnSearch">Search</button>
+                                </div>
+                            </div>    
+                        </div>                        
+                </div>
+            <br>
+            <!-- Link to the Landing Page. -->
+            <a class="return-home" href="https://atm951999.github.io/web-330/">Return</a>
+            </div>            
+        </div>        
+        <!-- Form container. -->
+            <div class="assign-container">
+                <div class="assign-content">                       
+                    <!-- Create card. -->
+                    <div class="card">
+                        <!-- Card title. -->
+                        <div class="card-title">Search Results</div>
+                        
+                        <!-- Where the results are displayed. -->
+                        <div class="card-content" id="searchResults">
+                            <table>
+                                <thead>
+
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>                     
+                </div>
+            </div>
+            <!-- JavaScript for Palindrome  -->
+            <script type="module">
+
+                setSelectedTheme();
+               
+
+                import { CalorieConverter } from "./calorie-converter.js";
+
+                let txtFoodItemEl = document.getElementById("txtFoodItem");
+
+                
+
+                document.getElementById("btnSearch").onclick = function()
+                {
+                    let txtFoodItem = txtFoodItemEl.value;
+
+                    let foods = CalorieConverter.find(txtFoodItem)
+
+                    let tableData = `
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Calories</th>
+                                                  
+                            </tr>
+                        </thead>
+                        <tbody>
+                    `
+                    for (let food of foods) 
+                    {
+                        let tableRow = `
+                        <tr>
+                            <td>${food.name}</td>
+                            <td>${food.calories}</td>
+                        </tr>`
+                        tableData += tableRow;
+                    }
+
+                    tableData += "</tbody></table>";
+
+                    document.getElementById("searchResults").innerHTML = tableData;
+                    
+                }
+
+                document.addEventListener("keyup", function(event)
+                {
+                    if (event.key == "Enter")
+                    {
+                        document.getElementById("btnSearch").click();
+                    }
+                })
+
+                let foodList = CalorieConverter.data;
+
+                let foodListData = "<i>(Ex: ";
+                for (let food of foodList)
+                {
+                    foodListData += `${food.name}, `;
+                }
+
+                foodListData = `${foodListData.slice(0,-2)})</i>`;
+
+                document.getElementById("foodList").innerHTML = foodListData;
+
+                
+
+                                
+            </script>
+    </body>
+</html>

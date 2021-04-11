@@ -24,6 +24,11 @@ body.light-theme {
     --btn-hover-background-color: #D6A800;
     --btn-hover-color: #4F3674;
     --input-border-color: #ccc;
+    --table-header-background-color: #4F3674;
+    --table-header-color: #fff;
+    --table-border-color: #ddd;
+    --table-hover-background-color: #D6A800;
+    --table-hover-color: #4F3674;
 }
 
 /** The styling variants for the dark mode. */
@@ -44,7 +49,12 @@ body.dark-theme {
     --btn-color: #fff;
     --btn-hover-background-color: #7d4787;
     --btn-hover-color: #fff;
-    --input-border-color: #303030; 
+    --input-border-color: #303030;
+    --table-header-background-color: #D176E1;
+    --table-header-color: #fff;
+    --table-border-color: #303030;
+    --table-hover-background-color: #7D4787;
+    --table-hover-color: #fff; 
 }
 
 /* Body styling */
@@ -152,4 +162,34 @@ h2, h3, h4 {
     border: solid 1px var(--input-border-color);
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+/** Styling for the table. */
+.table {    
+    margin-bottom: 30px;
+    border-collapse: collapse;
+    text-align: left;    
+}
+
+/** Styling for the table header. */
+.table th {
+    border: 1px solid #ddd;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 6px;
+    text-align: left;
+    background-color: var(--table-header-background-color);
+    color: var(--table-header-color)     
+ }
+
+/** Styling for the table data. */
+.table td, th {
+    padding: 6px;
+    border: 1px solid var(--table-border-color)
+}
+
+.table-hover tr:hover {
+    background-color: var(--table-hover-background-color);
+    color: var(--table-hover-color);
+    cursor: pointer;
 }

@@ -18,7 +18,9 @@
         <link href="../theme.css" type="text/css" rel="stylesheet">
         <link href="restaurant.css" type="text/css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">       
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+        
+        <script src="../theme.js"></script>
     </head>
 
     <body class="light-theme">
@@ -168,7 +170,9 @@
             </div>
             <!-- JavaScript for Restaurant App.  -->
             <script type="module">
-               import { Bill, Beverage, Appetizer, MainCourse, Dessert } from "./index.js"; 
+               import { Bill, Beverage, Appetizer, MainCourse, Dessert } from "./index.js";
+
+               setSelectedTheme()
                 
                document.getElementById("btnOrder").onclick = function () {
                 
