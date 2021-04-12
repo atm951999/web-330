@@ -10,6 +10,7 @@
 */
 
 import { CalorieConverter } from "./calorie-converter.js";
+
 // Create the FoodModel class.
 export class FoodModel
 {

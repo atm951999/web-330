@@ -188,6 +188,7 @@ h2, h3, h4 {
     border: 1px solid var(--table-border-color)
 }
 
+/** Styling for the table row hover. */
 .table-hover tr:hover {
     background-color: var(--table-hover-background-color);
     color: var(--table-hover-color);

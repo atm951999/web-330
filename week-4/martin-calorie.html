@@ -1,7 +1,7 @@
 <!--
     Title: martin-calorie.html
     Author: Angela Martin
-    Date: 04/09/2021
+    Date: 04/11/2021
     Description: Assignment 4.2 martin-calorie.html file.
 -->
 
@@ -14,12 +14,16 @@
         <meta name="description" content="Assignment 4.2 - Calorie App">
         <meta name="author" content="Angela Martin">
         
+        <!-- Link the needed css files. -->
         <link href="martin-calorie.css" type="text/css" rel="stylesheet">
         <link href="../site.css" type="text/css" rel="stylesheet">
         <link href="../theme.css" type="text/css" rel="stylesheet">
+
+        <!-- Link the fonts. -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
         
+        <!-- Link the theme.js javascript file. -->
         <script src="../theme.js"></script>
     </head>
 
@@ -81,24 +85,29 @@
                     </div>                     
                 </div>
             </div>
-            <!-- JavaScript for Palindrome  -->
+            
+            <!-- JavaScript for the Calorie App  -->
             <script type="module">
 
                 setSelectedTheme();
                
-
+                // Import the calorie converter module.
                 import { CalorieConverter } from "./calorie-converter.js";
 
+                // Create txtFoodItemE1 variable.
                 let txtFoodItemEl = document.getElementById("txtFoodItem");
 
                 
 
                 document.getElementById("btnSearch").onclick = function()
-                {
+                {   
+                    // Create txtFoodItem variable.
                     let txtFoodItem = txtFoodItemEl.value;
 
+                    // Create the foods variable.
                     let foods = CalorieConverter.find(txtFoodItem)
 
+                    // Create the tableData variable in the table format.
                     let tableData = `
                     <table class="table table-hover">
                         <thead>
@@ -110,6 +119,8 @@
                         </thead>
                         <tbody>
                     `
+
+                    // For/of loop to populate the table with the names and calories of the items.
                     for (let food of foods) 
                     {
                         let tableRow = `
@@ -126,6 +137,7 @@
                     
                 }
 
+                // Add event listener for if "Enter" key is pressed - invoke the click function.
                 document.addEventListener("keyup", function(event)
                 {
                     if (event.key == "Enter")
@@ -134,8 +146,10 @@
                     }
                 })
 
+                // Create the foodList variable.
                 let foodList = CalorieConverter.data;
 
+                // Build the foodList string.
                 let foodListData = "<i>(Ex: ";
                 for (let food of foodList)
                 {
@@ -144,11 +158,9 @@
 
                 foodListData = `${foodListData.slice(0,-2)})</i>`;
 
+                // Display foodListData String.
                 document.getElementById("foodList").innerHTML = foodListData;
 
-                
-
-                                
             </script>
     </body>
 </html>

@@ -1,6 +1,20 @@
+/*
+============================================
+; Title: Assignment 3.2
+; Author: Professor Krasso
+; Date: 11 April 2021
+; Modified By: Angela Martin
+; Description: This program demonstrates the
+; use of JavaScript modules.
+;===========================================
+*/
+
+// Import FoodModel class.
 import { FoodModel } from "./food-model.js";
 
+// Create CalorieConverter class.
 export class CalorieConverter {
+    // Create static variable array.
     static data = 
     [
         new FoodModel(1007, "Egg", 78),
