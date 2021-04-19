@@ -1,0 +1,189 @@
+<!--
+    Title: martin-bobs-auto-repair.html
+    Author: Angela Martin
+    Date: 04/17/2021
+    Description: Assignment 5.2 martin-bobs-auto-repair.html file.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Document Header information. -->
+    <head>
+        <title>WEB 330 – Enterprise JavaScript II</title>        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="Assignment 5.2 - Bob's Auto Repair App">
+        <meta name="author" content="Angela Martin">
+        
+        <!-- Link the needed css files. -->
+        <link href="martin-bobs-auto-repair.css" type="text/css" rel="stylesheet">
+        <link href="../site.css" type="text/css" rel="stylesheet">
+        <link href="../theme.css" type="text/css" rel="stylesheet">
+
+        <!-- Link the fonts. -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Link the needed javascript files. -->
+        <script src="../theme.js"></script>
+        <script src="cart-component.js"></script>
+    </head>
+
+    <body class="light-theme">
+        
+        <!-- This is the application container. -->
+        <div class="assign-container">
+            <!-- H1 Title. -->
+            <h1 class="app-header" style="background-color: white; color: black; border: none;">Welcome to Bob’s Automotive
+                Repair Shop!</h1>
+            <!-- Form container. -->
+            <div class="assign-content">
+                <!-- Create card. -->
+                <div class="card">
+                    <!-- Card title. -->
+                    <div class="card-title">
+                        Product Listing<br>
+                        <cart-component></cart-component>
+                    </div>                   
+                        
+                        <div class="card-content">
+
+                            <div class="form">
+
+                                <div class="form-field"> 
+                                    <!-- Label information. -->
+                                    <label id="form-field" for="productList">Choose a product:</label>
+
+                                    <!-- Drop down list. -->
+                                    <select name="productList" id="productList" class="drop-down-menu">
+                                        <option value="Select">--Select--</option>
+                                        <option value="19.99">Oil Change</option>
+                                        <option value="18.44">Filter Replacement</option>
+                                        <option value="9.99">Wiper Fluid Refill</option>
+                                    </select>
+                                </div>
+
+                                <!-- Cart message. -->
+                                <i id="cart-message">To view your shopping cart click on the cart icon</i>
+
+                                <div class="form-field">
+                                    <!-- Button information. -->
+                                    <button type="button" class="btn btn-primary full-width input" id="btnAddProduct">Add to Cart</button>
+                                </div>
+                            </div>    
+                        </div>                        
+                </div>
+            <br>
+            <!-- Link to the Landing Page. -->
+            <a class="return-home" href="https://atm951999.github.io/web-330/">Return</a>
+            </div>            
+        </div>        
+        <!-- Form container. -->
+            <div class="assign-container">
+                <div class="assign-content">                       
+                    <!-- Create card. -->
+                    <div class="card">
+                        <!-- Card title. -->
+                        <div class="card-title">Shopping Cart</div>
+                        
+                        <!-- Where the results are displayed. -->
+                        <div class="card-content" id="shoppingCart">
+                            <table>
+                                <thead>
+
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>                     
+                </div>
+            </div>
+
+            <!-- JavaScript for the Bob's Automotive Repair Shop  -->
+            <script type="module">
+
+                setSelectedTheme();
+               
+                // Import the product module.
+                import { Product } from "./product.js";
+
+                // Import the shopping-cart module.
+                import { ShoppingCart } from "./shopping-cart.js";
+
+                // Create shoppingCart variable.
+                let shoppingCart = new ShoppingCart();
+
+                // Call setCartCount function.
+                setCartCount();                
+
+                // On click function for Add to Cart button.
+                document.getElementById("btnAddProduct").onclick = function()
+                { 
+                    // Create productList variable.    
+                    let productList = document.getElementById("productList");
+
+                    // Create product variable.
+                    let product = productList.options[productList.selectedIndex].text;
+
+                    // Create productValue variable
+                    let productValue = productList.options[productList.selectedIndex].value;
+                    
+                    // If product is NOT equal to --Select-- Add the new product to the cart.
+                    if (product != "--Select--")
+                    {
+                        shoppingCart.add(new Product(product, productValue));
+
+                        // Call setCartCount function.
+                        setCartCount();
+                        
+                        // Create Alert saying what product was added to your shopping cart.
+                        alert(`${product} was added to your shopping cart!`);
+
+                        productList.value = "Select";
+                  }                    
+                    
+                }
+
+                // setCartCount function.
+                function setCartCount()
+                {
+                    document.getElementById("cart-count").innerHTML = shoppingCart.count();
+                }
+
+                // Create on click function for cartIcon.
+                document.getElementById("cartIcon").onclick = function()
+                {   
+                    // Create cartDisplayTable variable.
+                    let cartDisplayTable = `
+                    <table class="table">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                        </tr>`;
+
+                    // Loop through the products in the shopping cart.
+                    for (let product of shoppingCart)
+                    {   
+                        // Create tableRow.
+                        let tableRow = `
+                        <tr>
+                            <td>${product.id}</td>
+                            <td>${product.name}</td>
+                            <td>${product.price}</td>
+                        </tr>`;
+
+                        cartDisplayTable += tableRow;
+                    }
+
+                    cartDisplayTable += "</table>";
+
+                    // Display cartDisplayTable.
+                    document.getElementById("shoppingCart").innerHTML = cartDisplayTable;
+                }
+               
+            </script>
+    </body>
+</html>

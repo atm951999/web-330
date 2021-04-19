@@ -1,0 +1,19 @@
+/**
+    Title: martin-bobs-auto-repair.css
+    Author: Angela Martin
+    Date: 04/16/2021
+    Description: Styling for WEB 330 Assignment 5.2 martin-bobs-auto-repair.html file.
+*/
+
+/** The styling for the cart-message. */
+#cart-message {
+    float: right;
+    color: #df546a;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/** The styling for the cart-message. */
+i:hover {
+    cursor: pointer;
+}
