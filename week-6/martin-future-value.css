@@ -1,0 +1,20 @@
+/**
+    Title: martin-future-value.css
+    Author: Angela Martin
+    Date: 04/25/2021
+    Description: Styling for WEB 330 Assignment 6.2 martin-future-value.html file.
+*/
+
+/** The styling for the error messages. */
+.danger {
+    float: right;
+    color: #df546a;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/** Styling for the form labels. */
+.form-label {
+    display: inline-block;
+    padding-top: 1rem;
+}
