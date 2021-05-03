@@ -1,0 +1,210 @@
+<!--
+    Title: martin-whatabook1.html
+    Author: Angela Martin
+    Date: 05/02/2021
+    Description: Assignment 7.2 martin-whatabook1.html file.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Document Header information. -->
+<head>
+    <title>WEB 330 Enterprise JavaScript II</title>
+    <meta charset="UTF-8">
+
+    <!-- Links to Style sheets. -->
+    <link rel="stylesheet" type="text/css" href="../theme.css" /> 
+    <link rel="stylesheet" type="text/css" href="../site.css" />
+   
+    <!-- Links to Google fonts. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Needed JavaScript files. -->    
+    <script src="../theme.js"></script>
+
+
+</head>
+<body class="light-theme">
+
+<div class="assign-container">
+    <h1 class="app-header" style="color: black; background-color: white; border: none;">Welcome to the WhatABook, Part 1
+        App!</h1>
+    <div class="assign-content">
+
+        <!-- Create Container. -->
+        <div class="container">
+            
+                    <div class="card">
+                        
+                        <!-- Card Title. -->
+                        <div class="card-title">Book Listing</div>
+                        <div class="card-content" id="bookList">
+                            <table>
+                                <thead>
+
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+        </div>
+        <br>
+        <!-- Link  to the Landing Page. -->
+        <a class="return-home" href="https://atm951999.github.io/web-330/">Return</a>
+    </div>    
+        <!-- Form container. -->
+        <div class="assign-container">
+            <div class="assign-content">                       
+                <!-- Create card. -->
+                <div class="card">
+                    <!-- Create a container. -->
+                    <div class="container">
+                        
+                        <div class="card">
+
+                            <!-- Card title. -->
+                            <div class="card-title">Selected Book <span id="today"></span></div>
+                            <div class="card-content" id="selectedBook" style="text-align: center; font-size: 24px;"></div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+
+        </div>
+</div>
+
+<!-- JavaScript for martin-whatabook1.html. -->
+<script>
+
+    // Set the theme.
+    setSelectedTheme();
+
+    // Create an event listener.
+    window.addEventListener('DOMContentLoaded',() => {
+     
+        // Create variable fileName.
+        let fileName = "books.xml";
+
+        fetch(fileName)
+        .then(res => res.text())
+        .then(data => {
+
+            // Create a variable domParser
+            let domParser = new DOMParser();
+
+            // Create a variable xmlBooks
+            let xmlBooks = domParser.parseFromString(data, "text/xml");
+
+            // Call loadBooks function.
+            loadBooks(xmlBooks);
+
+            // Call addIsbnClickEvents function.
+            addIsbnClickEvents();
+        })
+    });    
+
+    // Create loadBooks function.
+    function loadBooks(xml) {
+
+        // Create books variable.
+        let books = xml.getElementsByTagName("book");
+
+        // Create tableData variable.
+        let tableData = `
+            <table id="bookTable" class="table">
+                <tr>
+                    <th>ISBN</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Pages</th>
+                    <th>Authors</th>
+                </tr>
+                `
+
+        for (let book of books) 
+        {   
+
+            // Create isbn variable.
+            let isbn = book.getElementsByTagName("isbn")[0].childNodes[0].nodeValue;
+
+            // Create title variable.
+            let title = book.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+
+            // Create description variable.
+            let description = book.getElementsByTagName("description")[0].childNodes[0].nodeValue;
+
+            // Create pages variable.
+            let pages = book.getElementsByTagName("pages")[0].childNodes[0].nodeValue;
+
+            // Create authors variable.
+            let authors = book.getElementsByTagName("authors")[0].childNodes[0].nodeValue;
+
+            // Embed information into tableData variable.
+            tableData += `
+                <tr>
+                    <td data-value="ISBN"><a href="#" class="isbn-link">${isbn}</a></td>
+                    <td data-value="Title">${title}</td>
+                    <td data-value="Description">${description}</td>
+                    <td data-value="Pages">${pages}</td>
+                    <td data-value="Authors">${authors}</td>
+                </tr>
+                `
+        }
+
+        // Close table.
+        tableData += "</table>";
+
+        // make ID bookList equal to tableData.
+        document.getElementById("bookList").innerHTML = tableData;    
+        
+    }
+
+    // Create function anchorClicked.
+    function anchorClicked(e) {
+        e.preventDefault();
+
+        // Create self variable.
+        let self = this;
+
+        // Create cell variable.
+        let cell = self.parentElement;
+
+        // Create row variable.
+        let row = cell.parentElement;
+
+        // Create data variable.
+        let data = row.querySelectorAll("td");
+
+        // Create bookData variable.
+        let bookData = "<ul style='list-style-type: none; text-align: left;'>"
+
+        for (let field of data)
+        {
+            bookData += `<li><b>${field.dataset.value}</b>: ${field.textContent}</li>`;
+        }
+
+        bookData += "</ul>";
+
+        document.getElementById("selectedBook").innerHTML = bookData;
+    }
+
+    // Create addIsbnClickEvents function.
+    function addIsbnClickEvents() {
+        let viewButtons = document.querySelectorAll("#bookTable tbody .isbn-link");
+
+        for (let index = 0; index < viewButtons.length; index++)
+        {
+            let viewButton = viewButtons[index];
+            viewButtons[index].addEventListener("click", anchorClicked);
+        }
+    }    
+
+</script>
+
+</body>
+</html>
+
