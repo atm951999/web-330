@@ -1,14 +1,20 @@
+body {
+    font-family: 'Lemonada', Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #a3a3c2;
+}
+
 #footer {
     width: 100%;
     height: 50px;
     text-align: center;
-    font-size: 12px;
+    font-size: 10px;
     font-style: italic;
-    background-color: black;
-    color: white;
+    margin: 0;
+    color: black;
     padding: 0px 0 15px 0;
-    bottom: 0;
-    position: absolute;
+    bottom: auto;
+    position: fixed;
 }
 
 #footer p {
@@ -17,9 +23,215 @@
 
 #footer a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 #footer a:visited {
-    color: violet;
+    color: black;
 }
+
+#footer a:hover {
+    background-color: lightseagreen;
+}
+
+#nav-bar {    
+    height: 30px;
+    list-style-type: none;
+    background-color: #a3a3c2;
+}
+
+#nav-list li {
+    float: right;
+    margin: 10px;
+    padding: 0;
+    width: auto;
+    display: block;
+}
+
+#nav-list li a {
+    background-color: #a3a3c2;
+    color: black;
+    text-decoration: none;
+    padding: 30px 50px 30px 10px;
+    display: block;
+}
+
+.container {
+    display: grid;
+    width: 75%;
+    height: 600px;  
+    margin: 0;   
+    border: 4px;
+    border-color: #29293d;
+    border-style: double;
+    background-color: #7575a3;    
+}
+
+.item1 {
+    grid-column: 1;
+    grid-row: 1-2;    
+    position: fixed;
+}
+
+.item2 {
+    grid-column: 2;
+    grid-row: row 1-2;
+    background-color: #5c5c8a;
+    margin: 0 -12px 0 0;
+}
+
+.item3 {
+    width: 300px;
+    height: 400px;
+    margin: 30px auto auto 20px;
+    background-color: #ff6666;
+    color: black;
+    
+    position: relative;
+    z-index: 0;
+   
+}
+
+.item4 {
+    width: 400px;
+    height: 350px;
+    margin: -220px -380px auto 215px;
+    display: grid;
+    background-color: yellow;
+    justify-content: center;
+    
+    position: absolute;
+    
+    z-index: -1;
+}
+
+.item5 {
+    width: 400px;
+    height: 350px;
+    grid-column: 2;
+    background-color: lightcoral;
+    margin: 208px auto auto 30px;
+    position:fixed;
+    z-index: 1;
+}
+
+.item6 {
+    width: 300px;
+    height: 400px;       
+    background-color: lightseagreen;
+    margin: 30px auto auto 325px;
+    position: fixed;
+    z-index: 0;
+}
+
+h3, h4 {
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Lemonada', Arial, Helvetica, sans-serif;
+    font-size: 46px;
+    font-weight: 600;
+    padding-top: 30px;
+    
+}
+
+h4 {
+    font-family: 'Lemonada', Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: 500;   
+}
+
+h5 {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 40px;
+    padding-left: 40px;    
+}
+
+h6 {
+    font-family: 'Lemonada', Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    color: black; 
+    text-align: center;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    margin: 30px 0 20px 0;
+    font-weight: 700;
+    line-height: 60px; 
+}
+
+p {
+    font-family: 'Lemonada', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: black;
+}
+
+.button {
+    width: 140px;
+    height: 45px;    
+    background-color: black;
+    color: white;
+    border: double #a3a3c2 3px;   
+}
+
+.container2 {
+    display: grid;
+    grid-template: repeat(3, [row] minmax(120px, 1fr)) / repeat(4, [col] 1fr);
+    gap: 5px;
+    width: 85%;
+    height: 600px;
+    vertical-align: middle;
+    background-color:white;
+    margin: 100px 50px 30px 150px;
+    border: double 4px #ff6666;
+    
+}
+
+.about1 {
+    grid-column: 1;
+    grid-row: 1/ 4;
+    background-color: lightskyblue;
+}
+
+.about2 {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: magenta;
+}
+
+.about3 {
+    grid-column: 3;
+    grid-row: 1;
+    background-color: mediumorchid;
+}
+.about4 {
+    grid-column: 4;
+    grid-row: 1 / 3;
+    background-color: orange;
+    
+    padding: 25px;
+    text-justify: left;
+}
+
+.about5 {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    background-color: peachpuff;
+}
+
+.about6 {
+    grid-column: 2;
+    grid-row: 3;
+    background-color: red;
+}
+
+.about7 {
+    grid-column: 3 / 5;
+    grid-row: 3;
+    background-color: rebeccapurple;
+    
+}
+
+
+

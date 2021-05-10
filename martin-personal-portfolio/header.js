@@ -6,31 +6,31 @@ class Header extends HTMLElement
 
     connectedCallback() {
         this.innerHTML = `
-            <div id="banner">
-                <h1>Professor Krasso's Personal Portfolio Example</h1>
-            </div>
-            <div id="nav-container">
-                <ul id="nav-list">
+            <nav id="nav-bar">
+                <ul id="nav-list">                    
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="martin-api-unit-tests.html">API Unit Tests</a>
                     </li>
                     <li>
-                        <a href="projects.html">Projects</a>
+                        <a href="martin-database-diagrams.html">Database Diagrams</a>
                     </li>
                     <li>
-                        <a href="#">Database Diagrams</a>
+                        <a href="martin-projects.html">Projects</a>
                     </li>
                     <li>
-                        <a href="#">API Unit Tests</a>
+                        <a href="martin-resume.html">Resume</a>
                     </li>
                     <li>
-                        <a href="resume.html">Resume</a>
+                        <a href="martin-about.html">About</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="martin-index.html">Home</a>
+                    </li>
+                    <li style="float:left; font-family: 'Arizonia'; font-size: 32px;">
+                        <a href="martin-about.html">Angela Martin</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         `;
     }
 }
