@@ -240,7 +240,7 @@ li {
 .about3 {
     grid-column: 3;
     grid-row: 1;
-    background: url(/Images/cats.jpg) gray;
+    background: url(../Images/cats.jpg) gray;
     background-size: cover;
     background-repeat: no-repeat;
 }
