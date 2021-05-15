@@ -288,7 +288,7 @@ li {
 .about8 {
     grid-column: 1;
     grid-row: 2 / 4;
-    background: url("../Images/beach.jpg") turquoise;
+    background: url("/Images/beach.jpg") turquoise;
     background-size: cover;
     background-repeat: no-repeat;
 }
