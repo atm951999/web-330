@@ -277,7 +277,7 @@ li {
 .about7 {
     grid-column: 3 / 5;
     grid-row: 3;
-    background: url("/../Images/about-music.jpg") thistle;
+    background: url("Images/about-music.jpg") thistle;
     background-size: cover;
     background-repeat: no-repeat;
     
