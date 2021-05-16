@@ -1,0 +1,96 @@
+/**
+    Title: restaurant.css
+    Author: Angela Martin
+    Date: 04/04/2021
+    Description: Styling for restaurant.html file.
+ */
+
+  /** Styling for the grid.*/
+  .grid {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+    display: grid;
+    height: 400px;
+    column-gap: 0px;
+    row-gap: 15px;
+    grid-auto-rows: auto; 
+    background-color: #c2c2d6; 
+  }
+  
+   /** Styling for grid-items 1 - 4.*/
+  .grid-item-1 {
+    
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .grid-item-2 {
+    grid-column: 2/3;
+    grid-row: 1;
+  }
+  
+  .grid-item-3 {
+    grid-column: 3/4;
+    grid-row: 1;
+    padding-bottom: 25px;
+  }
+  
+
+
+  body {
+    
+    margin: 0;
+    background-color: #a3a3c2;
+}
+
+#footer {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 10px;
+    font-style: italic;
+    margin: 0;
+    color: black;
+    padding: 0px 0 15px 0;
+    bottom: auto;
+    position: fixed;
+}
+
+#footer p {
+    line-height: 2px;
+}
+
+#footer a {
+    text-decoration: none;
+    color: black;
+}
+
+#footer a:visited {
+    color: black;
+}
+
+#footer a:hover {
+    background-color: lightseagreen;
+}
+
+#nav-bar {    
+    height: 30px;
+    list-style-type: none;
+    background-color: #a3a3c2;
+}
+
+#nav-list li {
+    float: right;
+    margin: 10px;
+    padding: 0;
+    width: auto;
+    display: block;
+}
+
+#nav-list li a {
+    background-color: #a3a3c2;
+    color: black;
+    text-decoration: none;
+    padding: 30px 50px 20px 10px;
+    display: block;
+}
+

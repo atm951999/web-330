@@ -1,0 +1,68 @@
+/**
+    Title: site.css
+    Author: Angela Martin
+    Date: 03/21/2021
+    Description: Styling for WEB 330 html files.
+ */
+
+ /** Styling for the app-header class.*/
+ .app-header {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+    
+    text-align: center;
+    font-weight: 400;
+}
+/** Styling to set assignment container padding. */
+.assign-container {
+    
+    padding: 10px;
+}
+/** Styling for the width of the assignment container. */
+.assign-content {
+    
+    width: 80%;
+    margin: 3% auto 0;
+}
+
+
+
+
+/** Setting the width for the full-width class. */
+.full-width {
+    width: 100%;
+}
+
+/** Styling for the return-home class. */
+.return-home {
+    color: #4F3674;
+    text-decoration: none;
+}
+
+/** Styling for when hovering over the return-home link. */
+.return-home:hover {
+    background-color: #D6A800;
+}
+
+/** Styling for when after the return-home link has been visited. */
+.return-home:visited {
+    color: #3C275A;
+}
+/** Styling to set the container margins. */
+#container {
+    margin: 50px 100px auto 100px;
+}
+
+/** Styling to change cursor to pointer when hovering over. */
+#icon-mode:hover {
+    cursor: pointer;
+}
+
+/** Styling to keep the padding on the icon text's left side. */
+#icon-text {
+    padding-left: 10px;
+}
+
+/** Styling to make the icon pull right. */
+.pull-right {
+    float: right;
+}

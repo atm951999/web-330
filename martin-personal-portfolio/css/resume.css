@@ -66,7 +66,21 @@ body {
     border: 4px;
     border-color: #29293d;
     border-style: double;
-    background-color: #9494b8;    
+    background-color: #c2c2d6;    
+}
+
+.flex-box {
+    display: flex;
+
+}
+
+.flex-box > * {
+    flex: 1;
+}
+
+.flex-box > p {
+    text-align: left;
+    margin-left: 230px;
 }
 
 hr {    
@@ -88,6 +102,7 @@ h3 {
 }
 
 h4 {
+    display: inline;
     font-size: 15px;
     font-weight: 600;
 }
