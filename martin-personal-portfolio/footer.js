@@ -1,9 +1,21 @@
+/*
+============================================
+; Title: footer.js
+; Author: Professor Krasso
+; Date: 16 May 2021
+; Modified By: Angela Martin
+; Description: JavaScript footer component.
+;===========================================
+*/
+
+// Create Footer component.
 class Footer extends HTMLElement
 {
     constructor() {
         super();
     }
 
+    // Call connectedCallback function.
     connectedCallback() {
         this.innerHTML = `
             <div id="footer">

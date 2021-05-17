@@ -1,10 +1,18 @@
+/**
+    Title: martin-resume.css
+    Author: Angela Martin
+    Date: 05/16/2021
+    Description: Styling for the Personal Profile Resume Page.
+ */
+
+  /** Styling for the body.*/
 body {
     font-family: Helvetica, 'Lemonada', Arial, sans-serif;
-
-    margin: 0;
-    background-color: #a3a3c2;
+    margin: 0 0 100px 0;
+    background-color: #A3A3B1;
 }
 
+/** Styling for the footer.*/
 #footer {
     width: 100%;
     height: 50px;
@@ -14,33 +22,39 @@ body {
     margin: 0;
     color: black;
     padding: 100px 0 15px 0;
-    bottom: auto;
+    bottom: 0;
     position: fixed;
 }
 
+/** Styling for the footer paragraph.*/
 #footer p {
     line-height: 2px;
 }
 
+/** Styling for the footer links.*/
 #footer a {
     text-decoration: none;
     color: black;
 }
 
+/** Styling for the footer visited.*/
 #footer a:visited {
     color: black;
 }
 
+/** Styling for the footer hovering.*/
 #footer a:hover {
     background-color: lightseagreen;
 }
 
+/** Styling for the navbar.*/
 #nav-bar {    
     height: 30px;
     list-style-type: none;
-    background-color: #a3a3c2;
+    background-color: #A3A3B1;
 }
 
+/** Styling for the navbar list item.*/
 #nav-list li {
     float: right;
     margin: 10px;
@@ -49,91 +63,98 @@ body {
     display: block;
 }
 
+/** Styling for the navbar links.*/
 #nav-list li a {
-    background-color: #a3a3c2;
+    background-color: #A3A3B1;
     color: black;
     text-decoration: none;
     padding: 30px 50px 30px 10px;
     display: block;
 }
 
+/** Styling for the container.*/
 .container {
     display: grid;
     width: 85%;
     height: auto;  
     margin: 0;
-    padding: 50px; 
+    padding: 50px;
     border: 4px;
     border-color: #29293d;
     border-style: double;
     background-color: #c2c2d6;    
 }
 
+/** Styling for the flex-box class.*/
 .flex-box {
     display: flex;
 
 }
 
+/** Styling for the flex-box class. */
 .flex-box > * {
     flex: 1;
 }
 
+/** Styling for the flex-box paragraph.*/
 .flex-box > p {
     text-align: left;
     margin-left: 230px;
 }
 
+/** Styling for the page dividers.*/
 hr {    
     border: 6px ridge #29293d;
     width: 100%;
     margin-left: auto;
-    margin-right: auto;
-       
+    margin-right: auto;       
 }
 
+/** Styling for the h1 heading.*/
 h1 {
     font-size: 26px;
     font-weight: 600;
 }
 
+/** Styling for the h3 heading.*/
 h3 {
     font-size: 16px;
     font-weight: 600;
 }
 
+/** Styling for the h4 heading.*/
 h4 {
     display: inline;
     font-size: 15px;
     font-weight: 600;
 }
 
+/** Styling for the h6 heading.*/
 h6 {
-    font-size: 15px;
-    
+    font-size: 15px;    
 }
 
+/** Styling for the h1, h3, and h6 headings.*/
 h1, h3, h6 {
     text-align: center;
 }
 
+/** Styling for the button.*/
 .button {
     width: 140px;
     height: 45px;
-    justify-self: right;
-       
+    justify-self: right;       
     background-color: black;
-    padding-top: 8px;
-    
+    padding-top: 8px;    
     text-align: center;
     border: double #a3a3c2 3px;   
 }
 
+/** Styling for the button link.*/
 .button a {
     text-decoration: none;
-    align-content: center;
-    
-    
-    color: white;
+    align-content: center;   
+    color: #A3A3B1;
 }
 
 

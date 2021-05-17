@@ -1,9 +1,21 @@
+/*
+============================================
+; Title: header.js
+; Author: Professor Krasso
+; Date: 16 May 2021
+; Modified By: Angela Martin
+; Description: Header component
+;===========================================
+*/
+
+// Create Header component.
 class Header extends HTMLElement
 {
     constructor() {
         super();
     }
 
+    // Call connectedCallback function.
     connectedCallback() {
         this.innerHTML = `
             <nav id="nav-bar">

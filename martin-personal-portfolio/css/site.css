@@ -1,31 +1,27 @@
 /**
     Title: site.css
     Author: Angela Martin
-    Date: 03/21/2021
-    Description: Styling for WEB 330 html files.
+    Date: 05/16/2021
+    Description: Styling for Personal Profile html files.
  */
 
  /** Styling for the app-header class.*/
  .app-header {
-    font-family: 'Oswald', Verdana, Arial, sans-serif;
-    
+    font-family: 'Oswald', Verdana, Arial, sans-serif;    
     text-align: center;
     font-weight: 400;
 }
+
 /** Styling to set assignment container padding. */
-.assign-container {
-    
+.assign-container {    
     padding: 10px;
 }
+
 /** Styling for the width of the assignment container. */
-.assign-content {
-    
+.assign-content {    
     width: 80%;
     margin: 3% auto 0;
 }
-
-
-
 
 /** Setting the width for the full-width class. */
 .full-width {
@@ -40,7 +36,7 @@
 
 /** Styling for when hovering over the return-home link. */
 .return-home:hover {
-    background-color: #D6A800;
+    background-color: lightseagreen;
 }
 
 /** Styling for when after the return-home link has been visited. */

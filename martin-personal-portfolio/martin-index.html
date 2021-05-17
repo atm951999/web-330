@@ -1,4 +1,9 @@
-
+<!--
+    Title: martin-index.html
+    Author: Angela Martin
+    Date: 05/16/2021
+    Description: Personal Portfolio Home page.
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,11 +11,8 @@
     <meta charset="UTF-8">
     <title>Personal Portfolio</title>
 
-    <!-- Stylesheet references -->
-
-    
+    <!-- Stylesheet references -->   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/martin-portfolio.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet"> 
@@ -19,13 +21,13 @@
 
     <!-- JavaScript references -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-
     <script src="header.js"></script>
     <script src="footer.js"></script>
 </head>
 <body>
     <div>    
-    
+        
+        <!-- Header component -->
         <header-component></header-component>
             <div class="container">
                 <div class="item1">
@@ -40,15 +42,19 @@
                     <div class="item4">
                         <br>
                         
+                        <!-- About Button - takes you to the about page. -->
                         <button type="button" class="button" id="btnAbout">About</button>
                         
+                        <!-- Resume Button - takes you to the resume page. -->
                         <button type="button" class="button" id="btnOrder">Resume</button>
                         
                     </div>                
                 </div>
 
                 <div class="item2">
-                   <div class="item5">
+
+                    <!-- Bootstrap carousel -->
+                    <div class="item5">
                         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -82,15 +88,10 @@
                    <div class="item6">
                         <h6><br><br>BUCKET
                             LIST</h6>
-                        
-
                    </div>                                    
                 </div>
             </div>
-            
-        
-
-    </div>
+        </div>
     <br>
     <br>
     <footer-component></footer-component>

@@ -1,24 +1,22 @@
 /**
-    Title: restaurant.css
+    Title: martin-projects.css
     Author: Angela Martin
-    Date: 04/04/2021
-    Description: Styling for restaurant.html file.
+    Date: 05/16/2021
+    Description: Styling for the Projects, Database Diagrams, and API Unit Testing pages.
  */
 
   /** Styling for the grid.*/
   .grid {
     font-family: 'Oswald', Verdana, Arial, sans-serif;
     display: grid;
-    height: 400px;
-    column-gap: 0px;
-    row-gap: 15px;
+    height: 350px ;    
     grid-auto-rows: auto; 
+    padding: 0 25px 40px 25px;
     background-color: #c2c2d6; 
   }
   
-   /** Styling for grid-items 1 - 4.*/
-  .grid-item-1 {
-    
+   /** Styling for grid-items 1 - 3.*/
+  .grid-item-1 {    
     grid-column: 1;
     grid-row: 1;
   }
@@ -35,13 +33,13 @@
   }
   
 
-
-  body {
-    
+/** Styling for the body.*/
+  body {    
     margin: 0;
-    background-color: #a3a3c2;
+    background-color: #A3A3B1;
 }
 
+/** Styling for the footer.*/
 #footer {
     width: 100%;
     height: 50px;
@@ -55,29 +53,35 @@
     position: fixed;
 }
 
+/** Styling for the footer paragraph.*/
 #footer p {
     line-height: 2px;
 }
 
+/** Styling for the footer links.*/
 #footer a {
     text-decoration: none;
     color: black;
 }
 
+/** Styling for the footer link visited.*/
 #footer a:visited {
     color: black;
 }
 
+/** Styling for the footer hovering.*/
 #footer a:hover {
-    background-color: lightseagreen;
+    background-color: #D0BAE3;
 }
 
+/** Styling for the navbar.*/
 #nav-bar {    
     height: 30px;
     list-style-type: none;
-    background-color: #a3a3c2;
+    background-color: #A3A3B1;
 }
 
+/** Styling for the navbar list item.*/
 #nav-list li {
     float: right;
     margin: 10px;
@@ -86,11 +90,21 @@
     display: block;
 }
 
+/** Styling for the navbar links.*/
 #nav-list li a {
-    background-color: #a3a3c2;
+    background-color: #A3A3B1;
     color: black;
     text-decoration: none;
     padding: 30px 50px 20px 10px;
     display: block;
 }
 
+/** Styling for the list items.*/
+li {
+  font-size: 18px;
+}
+
+/** Styling for the paragraph tag.*/
+p {
+  font-size: 14px;
+}
