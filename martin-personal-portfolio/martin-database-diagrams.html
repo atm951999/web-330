@@ -50,26 +50,25 @@
                                 <!-- Create card. -->
                                 <div class="card1">
                                     <!-- Card title. -->
-                                    <div class="card-title2">Title</div>
+                                    <div class="card-title2">Data Models</div>
                             
                                         <div class="card-content" id="landing-pages">
                                             <ul>
-                                                <li>Subtitle
+                                                <li><a href="/martin-personal-portfolio/nosql-data-diagrams/assignment1.4-ORDs.JPG">Object Relational Diagrams</a>
+                                                    </a>
+                                                    
+                                                   
+                                                    
+                                                   
                                                     <br>                                                    
                                                         <p>
-                                                            Lorem ipsum sit amet, consectetur elit. 
+                                                            ORD's of the different relationships.
                                                         </p>
                                                 </li>
-                                                <li>Subtitle
+                                                <li><a href="/martin-personal-portfolio/nosql-data-diagrams/assignment1.4-nosql-data-structures.JPG" class="image-link" data-url="/NoSQLDataStructures">NoSQL Data Structures</a>
                                                     <br>                                                    
                                                         <p>
-                                                            Lorem ipsum sit amet, consectetur elit. 
-                                                        </p>
-                                                </li>
-                                                <li>Subtitle
-                                                    <br>                                                    
-                                                        <p>
-                                                            Lorem ipsum sit amet, consectetur elit. 
+                                                            NoSQL representation of the relationships. 
                                                         </p>
                                                 </li>
                                             </ul>   
@@ -150,7 +149,22 @@
 
         <!-- Footer component -->
         <footer-component></footer-component>
+<script>
+    // find all <a> tags with class of 'image-link'
+let links = document.querySelectorAll('a.image-link');
 
+// loop through the links
+for (var i = 0; i < links.length; i++)
+{
+    let link = links[i];
+    // listen for the click event
+    link.addEventListener('click', function()
+    {
+        // on click, show the image using the URL from the data-url attribute
+        disp_img(link.data.url);
+    });
+}
+</script>
 </body>
 </html>
 
