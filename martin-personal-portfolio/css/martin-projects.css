@@ -9,7 +9,7 @@
   .grid {
     font-family: 'Oswald', Verdana, Arial, sans-serif;
     display: grid;
-    height: 650px ;    
+    height: 650px;    
     grid-auto-rows: auto;
     row-gap: 20px;
     padding: 0 25px 25px 25px;
