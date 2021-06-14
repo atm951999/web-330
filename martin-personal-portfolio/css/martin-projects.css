@@ -9,9 +9,10 @@
   .grid {
     font-family: 'Oswald', Verdana, Arial, sans-serif;
     display: grid;
-    height: 350px ;    
-    grid-auto-rows: auto; 
-    padding: 0 25px 40px 25px;
+    height: 650px ;    
+    grid-auto-rows: auto;
+    row-gap: 20px;
+    padding: 0 25px 25px 25px;
     background-color: #c2c2d6; 
   }
   
@@ -29,6 +30,22 @@
   .grid-item-3 {
     grid-column: 3/4;
     grid-row: 1;
+    padding-bottom: 25px;
+  }
+
+  .grid-item-4 {    
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .grid-item-5 {
+    grid-column: 2/3;
+    grid-row: 2;
+  }
+  
+  .grid-item-6 {
+    grid-column: 3/4;
+    grid-row: 2;
     padding-bottom: 25px;
   }
   
