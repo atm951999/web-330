@@ -97,6 +97,11 @@ h2, h3, h4 {
     transition: 0.3s;    
 }
 
+.card2 {
+    height: auto;
+    background-color: #8585ad;
+}
+
 /** Styling for card-title1 class. */
 .card-title1 {    
     text-align: center;
@@ -116,6 +121,15 @@ h2, h3, h4 {
 
 /** Styling for the card-title2 class. */
 .card-title3 {
+    padding: 20px 20px 20px 25px;    
+    text-align: left;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+/** Styling for the card-title2 class. */
+.card-title4 {
+    height: 675px;
     padding: 20px 20px 20px 25px;    
     text-align: left;
     font-size: 2em;
